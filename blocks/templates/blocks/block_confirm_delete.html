@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Block</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete "{{ block.shape }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'block-detail' block.id %}">Cancel</a>
+</body>
+</html>

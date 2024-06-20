@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if block %}Edit{% else %}Create{% endif %} Block</title>
+</head>
+<body>
+    <h1>{% if block %}Edit{% else %}Create{% endif %} Block</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% if block %}Save{% else %}Create{% endif %}</button>
+    </form>
+    <a href="{% url 'block-list' %}">Back to list</a>
+</body>
+</html>

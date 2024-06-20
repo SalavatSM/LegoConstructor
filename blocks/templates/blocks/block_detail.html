@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block Detail</title>
+</head>
+<body>
+    <h1>{{ block.shape }}</h1>
+    <p>Color: {{ block.color }}</p>
+    <p>Size: {{ block.size }}</p>
+    <a href="{% url 'block-update' block.id %}">Edit</a>
+    <a href="{% url 'block-delete' block.id %}">Delete</a>
+    <a href="{% url 'block-list' %}">Back to list</a>
+</body>
+</html>

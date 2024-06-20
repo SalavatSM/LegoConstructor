@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block List</title>
+</head>
+<body>
+    <h1>Block List</h1>
+    <ul>
+        {% for block in blocks %}
+            <li>
+                <a href="{% url 'block-detail' block.id %}">{{ block.shape }} - {{ block.color }} - {{ block.size }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'block-create' %}">Create new block</a>
+</body>
+</html>
